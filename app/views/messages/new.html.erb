@@ -1,0 +1,14 @@
+<h1>Compose a text message!</h1>
+<br />
+
+<%= form_for @message do |f| %>
+  <div class="form-group">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+   <%= f.hidden_field(:from, :value => "8605564067") %>
+   <%= f.hidden_field(:to, :value => "8603361346") %>
+  <br />
+  <%= f.submit(:class => 'btn btn-primary') %>
+
+ <% end %>
