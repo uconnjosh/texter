@@ -4,6 +4,7 @@ class Message < ActiveRecord::Base
 private
 
   def send_message
+   begin
     response = RestClient::Request.new(
       :method => :post,
       :url => "https://api.twilio.com/2010-04-01/Accounts/#{ENV['TWILIO_ACCOUNT_SID']}/Messages.json",
@@ -13,5 +14,8 @@ private
                     :To => to,
                     :From => from }
     ).execute
+   rescue
+    false
+   end
   end
 end
