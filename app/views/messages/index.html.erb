@@ -4,9 +4,14 @@
   <ul>
   <% @messages.all.each do |message| %>
   <li><%= message.body %></li>
+  <a href="messages/<%= message.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">(delete)</a>
   <% end %>
   </ul>
   <br />
   <br />
-  <%= link_to "Make a New Text", new_message_path, class: 'btn btn-primary' %>
+  <%= link_to "Make a New Text", new_message_path(@message), remote: true, class: 'btn btn-primary', id: 'new_text' %>
+
+  <br />
+  <div id="create_text">
+  </div>
 
