@@ -6,8 +6,14 @@
     <%= f.label :body %>
     <%= f.text_field :body %>
   </div>
-   <%= f.hidden_field(:from, :value => "8605564067") %>
-   <%= f.hidden_field(:to, :value => "8603361346") %>
+  <div class="form-group">
+   <%= f.label :from %>
+   <%= f.text_field(:from, :value => "8605564067") %>
+  </div>
+  <div class="form-group">
+   <%= f.label :to %>
+   <%= f.text_field(:to, :value => "8603361346") %>
+  </div>
   <br />
   <%= f.submit(:class => 'btn btn-primary') %>
 
