@@ -29,6 +29,8 @@ group :test, :development do
   gem 'textacular'
   gem 'launchy'
   gem 'poltergeist'
+  gem 'dotenv-rails'
+
 end
 
 group :test do
