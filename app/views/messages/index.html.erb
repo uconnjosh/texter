@@ -23,9 +23,8 @@
     <br />
     <ul>
      <% @numbers.each do |number| %>
-       <li><%= number.contact_name %>&nbsp; <%= number.phone_number %></li>
-       <% end %>
-    </ul>
+       <li><%= link_to "Send a text to: ", new_message_path(@message, to: number.phone_number), remote: true, id: 'new_digit' %><%= number.contact_name %>&nbsp;<span id="digits", data="<%= number.phone_number %>"></span><%= number.phone_number %>&nbsp; </li>
+     <% end %>
     <br />
     <%= link_to "Create a new contact", new_number_path(@number), remote: true, class:
     'btn btn-primary', id: 'new_number' %>

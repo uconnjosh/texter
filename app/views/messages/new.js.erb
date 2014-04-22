@@ -1,1 +1,7 @@
+var contact = document.getElementById('digits');
+var number = contact.getAttribute('data')
+
+
 $('#new_text').hide().after('<%= j render("form") %>');
+
+$('#message_to').val(number);
