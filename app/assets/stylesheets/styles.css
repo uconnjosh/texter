@@ -1,3 +1,10 @@
 .container {
 	margin-left: 20%;
 }
+.messages {
+  float: left;
+}
+.numbers {
+  float: right;
+  margin-right: 30%;
+}

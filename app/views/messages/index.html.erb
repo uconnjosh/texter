@@ -1,17 +1,33 @@
-<h1>Your Texts:</h1>
-<br />
-<br />
-  <ul>
-  <% @messages.all.each do |message| %>
-  <li><%= message.body %></li>
-  <a href="messages/<%= message.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">(delete)</a>
-  <% end %>
-  </ul>
-  <br />
-  <br />
-  <%= link_to "Make a New Text", new_message_path(@message), remote: true, class: 'btn btn-primary', id: 'new_text' %>
 
-  <br />
-  <div id="create_text">
+  <div class="messages">
+    <h1>Your Texts:</h1>
+<br />
+<br />
+    <ul>
+    <% @messages.all.each do |message| %>
+    <li><%= message.body %></li>
+    <a href="messages/<%= message.id %>" data-confirm="Are you sure?" data-method="delete" rel="nofollow">(delete)</a>
+    <% end %>
+    </ul>
+    <br />
+    <br />
+    <%= link_to "Make a New Text", new_message_path(@message), remote: true, class: 'btn btn-primary', id: 'new_text' %>
+
+    <br />
+    <!-- <div id="create_text">
+    </div> -->
+  </div>
+
+  <div class="numbers">
+    <h1>Your Phone Numbers</h1>
+    <br />
+    <ul>
+     <% @numbers.each do |number| %>
+       <li><%= number.contact_name %>&nbsp; <%= number.phone_number %></li>
+       <% end %>
+    </ul>
+    <br />
+    <%= link_to "Create a new contact", new_number_path(@number), remote: true, class:
+    'btn btn-primary', id: 'new_number' %>
   </div>
 
