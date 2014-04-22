@@ -6,7 +6,6 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'bcrypt'
 gem 'devise'
@@ -30,6 +29,7 @@ group :test, :development do
   gem 'launchy'
   gem 'poltergeist'
   gem 'dotenv-rails'
+  gem 'pry'
 
 end
 
