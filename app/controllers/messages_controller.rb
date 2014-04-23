@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
 
   def new
   	@message = Message.new(to: params[:to])
+    @numbers = Number.all
 
   end
 

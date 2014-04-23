@@ -8,3 +8,10 @@
   float: right;
   margin-right: 30%;
 }
+ul.contacts {
+  list-style-type: none;
+  display: inline;
+}
+li.contacts {
+  display: inline;
+}

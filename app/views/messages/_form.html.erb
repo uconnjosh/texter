@@ -1,3 +1,21 @@
+<script>
+$(document).ready(function() {
+  // $( "input[data-numb]" ).click(function() {
+  //   alert($(this.phone_number));
+   $('.multi').click(function() {
+     numberToAdd = ($(this).text());
+     $('.send_to').val($('.send_to').val() + numberToAdd + ',');
+
+
+ //  alert(('.multi').text());
+  // alert($(this.phone_number));
+ });
+
+})
+</script>
+
+
+
 <h1>Compose a text message!</h1>
 <br />
 
@@ -12,9 +30,16 @@
   </div>
   <div class="form-group">
    <%= f.label :to %>
-   <%= f.text_field(:to) %>
+   <%= f.text_field(:to, :class => "send_to") %>
   </div>
   <br />
   <%= f.submit(:class => 'btn btn-primary') %>
 
  <% end %>
+
+ <ul class="contacts">
+        <% @numbers.each do |number| %>
+          &nbsp;<li class="contacts">
+          <span class="multi"><%= number.phone_number %></span><%= number.contact_name %></span></li>&nbsp;
+        <% end %>
+      </ul>
